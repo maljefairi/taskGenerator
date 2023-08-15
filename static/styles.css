@@ -1,0 +1,39 @@
+/* Styling for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+/* Styling for the search box */
+#searchInput {
+    margin-bottom: 20px;
+    padding: 8px;
+    width: 100%;
+}
+
+/* Styling for pagination */
+#pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#pagination a {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+}
+
+#pagination a:hover {
+    background-color: #f2f2f2;
+}

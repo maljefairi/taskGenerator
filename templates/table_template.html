@@ -6,10 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activities Table</title>
-    <link rel="stylesheet" href="path_to_css_file.css"> <!-- Add your CSS path here -->
-    <script src="path_to_js_file.js" defer></script> <!-- Add your JS path here -->
+    
+    <!-- Link to your stylesheet (replace with actual path) -->
+    <link rel="stylesheet" href="/static/styles.css">
+    
+    <!-- Link to your JavaScript file (replace with actual path) -->
+    <script src="/static/scripts.js" defer></script>
+
     <style>
-        /* Add inline styles for the table or link an external CSS file */
+        /* Basic inline styles for the table */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -31,9 +36,11 @@
     <!-- Search Filters -->
     <input type="text" id="searchInput" onkeyup="filterActivities()" placeholder="Search for activities..">
 
+    <!-- Activities Table with Sorting Feature -->
     <table border="1" id="activitiesTable">
         <thead>
             <tr>
+                <!-- The "sortTable" function will be called with column index when header is clicked -->
                 <th onclick="sortTable(0)">Activities</th>
                 <th onclick="sortTable(1)">RS</th>
                 <th onclick="sortTable(2)">GC</th>
@@ -69,7 +76,7 @@
         <p><strong>MVP</strong>: Most Valuable Players</p>
     </div>
 
-    <!-- Pagination -->
+    <!-- Pagination (Currently, just a visual placeholder) -->
     <div id="pagination">
         <a href="#">&laquo;</a>
         <a href="#">1</a>
@@ -79,5 +86,4 @@
         <a href="#">&raquo;</a>
     </div>
 </body>
-
 </html>
