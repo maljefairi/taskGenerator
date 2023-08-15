@@ -1,25 +1,47 @@
-<!-- table_template.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activities Table</title>
+    <link rel="stylesheet" href="path_to_css_file.css"> <!-- Add your CSS path here -->
+    <script src="path_to_js_file.js" defer></script> <!-- Add your JS path here -->
+    <style>
+        /* Add inline styles for the table or link an external CSS file */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
     <h2>Activities, Points & Frequency Table</h2>
-    <table border="1">
+
+    <!-- Search Filters -->
+    <input type="text" id="searchInput" onkeyup="filterActivities()" placeholder="Search for activities..">
+
+    <table border="1" id="activitiesTable">
         <thead>
             <tr>
-                <th>Activities</th>
-                <th>RS</th>
-                <th>GC</th>
-                <th>CC</th>
-                <th>MVP</th>
-                <th>Experience</th>
-                <th>Frequency</th>
-                <th>Dimension(s)</th>
+                <th onclick="sortTable(0)">Activities</th>
+                <th onclick="sortTable(1)">RS</th>
+                <th onclick="sortTable(2)">GC</th>
+                <th onclick="sortTable(3)">CC</th>
+                <th onclick="sortTable(4)">MVP</th>
+                <th onclick="sortTable(5)">Experience</th>
+                <th onclick="sortTable(6)">Frequency</th>
+                <th onclick="sortTable(7)">Dimension(s)</th>
             </tr>
         </thead>
         <tbody>
@@ -37,5 +59,25 @@
             {% endfor %}
         </tbody>
     </table>
+
+    <!-- Shortcuts Info -->
+    <div>
+        <h3>Shortcuts Info:</h3>
+        <p><strong>RS</strong>: Rising Stars</p>
+        <p><strong>GC</strong>: Game Changers</p>
+        <p><strong>CC</strong>: Champions Circle</p>
+        <p><strong>MVP</strong>: Most Valuable Players</p>
+    </div>
+
+    <!-- Pagination -->
+    <div id="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">&raquo;</a>
+    </div>
 </body>
+
 </html>
