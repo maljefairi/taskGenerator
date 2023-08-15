@@ -1,0 +1,41 @@
+<!-- table_template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities Table</title>
+</head>
+<body>
+    <h2>Activities, Points & Frequency Table</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Activities</th>
+                <th>RS</th>
+                <th>GC</th>
+                <th>CC</th>
+                <th>MVP</th>
+                <th>Experience</th>
+                <th>Frequency</th>
+                <th>Dimension(s)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for activity in activities %}
+            <tr>
+                <td>{{ activity["Activities"] }}</td>
+                <td>{{ activity["RS"] }}</td>
+                <td>{{ activity["GC"] }}</td>
+                <td>{{ activity["CC"] }}</td>
+                <td>{{ activity["MVP"] }}</td>
+                <td>{{ activity["Experience"] }}</td>
+                <td>{{ activity["Frequency"] }}</td>
+                <td>{{ activity["Dimension(s)"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
